@@ -1,9 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import styled from 'styled-components';
-
-const Count = styled.div``;
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,13 +11,11 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Count>
-          {count}
-          <div className="event-box">
-            <button onClick={() => setCount(count + 1)}>+</button>
-            <button onClick={() => setCount(count - 1)}>-</button>
-          </div>
-        </Count>
+        {count}
+        <div className="event-box">
+          <button onClick={() => setCount(count + 1)}>+</button>
+          <button onClick={() => setCount(count - 1)}>-</button>
+        </div>
       </header>
     </div>
   );
